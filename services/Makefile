@@ -9,7 +9,7 @@ DOCKER_IMAGES = \
 	shell \
 	jupyter
 
-DOCKER_REPOSITORY ?= "kubelytics"
+DOCKER_REPOSITORY ?= "artifactory.iguazeng.com:6555/kubelytics"
 
 BASE_DOCKER_VERSION ?= 2.0.0
 HADOOP_VERSION ?= 2.9.0

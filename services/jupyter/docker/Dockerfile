@@ -66,7 +66,7 @@ RUN conda install -c anaconda --quiet --yes \
     && \
     pip install \
     nbgitpuller \
-    jupyterlab-git \
+    git+https://github.com/urihoenig/jupyterlab-git.git@MinGit \
     v3io_frames==0.4.2 \
     nuclio-jupyter==0.7.2 \
     && \
@@ -76,7 +76,7 @@ RUN conda install -c anaconda --quiet --yes \
     jupyter labextension install jupyterlab_bokeh@^0.6.3 && \
     jupyter labextension install @mflevine/jupyterlab_html && \
     jupyter labextension install @jupyterlab/toc  && \
-    jupyter labextension install @jupyterlab/git  && \
+    jupyter labextension install https://github.com/urihoenig/jupyterlab-git/releases/download/990.5.0/mygit-0.5.0.tgz && \
     jupyter serverextension enable --user jupyterlab_discovery  && \
     jupyter serverextension enable --py jupyterlab_git --sys-prefix && \
     jupyter serverextension enable --py nbgitpuller --sys-prefix && \
